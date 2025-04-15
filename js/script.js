@@ -14,21 +14,21 @@ document.addEventListener("click", function (e) {
 });
 
 // Pop-up modal studi kasus
-const studiBanner = document.querySelector('.studi-banner img');
-const modal = document.getElementById('modalStudiKasus');
-const closeBtn = document.querySelector('.close-button');
+const studiBanner = document.querySelector(".studi-banner img");
+const modal = document.getElementById("modalStudiKasus");
+const closeBtn = document.querySelector(".close-button");
 
-studiBanner.addEventListener('click', function () {
-  modal.style.display = 'block';
+studiBanner.addEventListener("click", function () {
+  modal.style.display = "block";
 });
 
-closeBtn.addEventListener('click', function () {
-  modal.style.display = 'none';
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
 });
 
-window.addEventListener('click', function (e) {
+window.addEventListener("click", function (e) {
   if (e.target === modal) {
-    modal.style.display = 'none';
+    modal.style.display = "none";
   }
 });
 
@@ -42,11 +42,12 @@ document.getElementById("formWa").addEventListener("submit", function (e) {
   const pesan = document.getElementById("pesan").value;
 
   const noWa = "6282164442463"; // Nomor WA Mama Ninis
-  const teks = `Halo Mama Ninis!%0A` +
-               `Saya *${nama}* ingin menjahit/konsultasi.%0A` +
-               `📧 Email: ${email}%0A` +
-               `📞 No HP: ${nohp}%0A` +
-               `📝 Pesan: ${pesan}`;
+  const teks =
+    `Halo Mama Ninis!%0A` +
+    `Saya *${nama}* ingin menjahit/konsultasi.%0A` +
+    `📧 Email: ${email}%0A` +
+    `📞 No HP: ${nohp}%0A` +
+    `📝 Pesan: ${pesan}`;
 
   const waUrl = `https://wa.me/${noWa}?text=${encodeURIComponent(teks)}`;
   window.open(waUrl, "_blank");
